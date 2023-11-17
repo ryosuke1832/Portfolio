@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="https://d1nkt0x8bzz6gz.cloudfront.net/api/css?family=WhiteGardenRegular:Regular">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <meta http-equiv="content-type" charset="utf-8">
+
+
+
+</head>
+<body>
+    <!-- 読み込み画面 -->
+    <div class="loading-screen">
+        <div class="loading-progress" id="loading-progress"></div>
+        <div class="loading-percentage" id="loading-percentage">0%</div>
+    </div>
+
+    <header>
+
+        <div class="satomari-title">
+            <img src="./src/images/hedder.png" alt="header Image" class="img-responsive">
+            <h1>Satoshi</h1>
+            <h2>and</h2>
+            <h1>Mari</h1>
+        </div>
+
+        <!-- ハンバーガーメニューのアイコン -->
+        <div id="hamburger-menu">
+            <div class="bars">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+
+        <!-- デスクトップ表示の際のメニュー -->
+        <nav id="mobile-nav" >
+            <a href="#home" class="gold-color">ホーム</a>
+            <a href="./seat_view.html">席次表</a>
+            <a href="./photo.html">アルバム</a>
+            <a href="./movie.html">動画</a>
+            <a href="./second_information.html">二次会情報</a>
+        </nav>
+
+        <!-- スマホ表示のサイドメニュー -->
+        <!-- サイドバー -->
+        <div id="sidebar">
+            <nav id="mobile-nav-side">
+                <a href="./seat_view.html">席次表</a>
+                <a href="./photo.html">アルバム</a>
+                <a href="./movie.html">動画</a>
+                <a href="./second_information.html">二次会情報</a>
+            </nav>
+        </div>
+        <!-- サイドバー以外の部分を覆う透明なレイヤー -->
+        <div id="overlay"></div>
+
+
+
+
+    </header>
+
+    <main>
+        <div class="top-image">
+            <img src="./src/images/main.jpg" alt="Main Image" class="img-responsive">
+        </div>
+
+        <div class="name-title">
+            <section id="date">
+                <h3>2023/10/07</h3>
+            </section>
+        </div>
+        <div class="name-title">
+            <section id="story">
+                <div class="blank-space"></div>
+                <img src="./src/images/center.jpg" alt="center Image" class="center-image">
+                <div class="blank-space"></div>
+                <h2 class="story-animation">皆様へ</h2>
+                <div class="blank-space"></div>
+                <div class="blank-space"></div>
+                <p class="story-animation">ご出席頂きありがとうございます</p>
+                <p class="story-animation">皆様により楽しんで頂けるように</p>
+                <p class="story-animation">WEBページを制作しました</p>
+                <div class="blank-space"></div>
+                <div class="blank-space"></div>
+                <p class="story-animation">WEB席次表では</p>
+                <p class="story-animation">どんな人が来るのか事前に知れるので</p>
+                <p class="story-animation">当日は初めましての人とも</p>
+                <p class="story-animation">一緒に楽しんでもらえたら嬉しいです</p>
+
+                <div class="blank-space"></div>
+                <div class="blank-space"></div>
+                <p class="story-animation">式後に写真のシェアがこのWEBページで出来ますので</p>
+                <p class="story-animation">たくさん写真を撮って</p>
+                <p class="story-animation">みんなでシェアしましょう</p>
+                <div class="blank-space"></div>
+                <div class="blank-space"></div>
+                <p class="story-animation">2次会情報もこちらで確認頂けます</p>
+                <div class="blank-space"></div>
+                <div class="blank-space"></div>
+                <p class="story-animation">*本WEBサイトは、一般公開されていません</p>
+                <div class="blank-space"></div>
+                <div class="blank-space"></div>
+            </section>
+
+            <!-- Glide.js Slider -->
+            <div class="glide reveal-on-scroll">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide"><img src="./src/images/slide1.jpg" alt="Image 1"class="img-responsive"></li>
+                        <li class="glide__slide"><img src="./src/images/slide2.jpg" alt="Image 2"class="img-responsive"></li>
+                        <li class="glide__slide"><img src="./src/images/slide3.jpg" alt="Image 3"class="img-responsive"></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="blank-space"></div>
+            <div class="blank-space"></div>
+
+
+            <!-- Google Map -->
+            <div class="access">
+                <section id="date">
+                    <p>Access</p>
+                    <p>会場/NEST by THE SEA</p>
+                    <p>住所/愛知県知多市新舞子大瀬20-5</p>
+                    <p>電話/0569-43-3008</p>
+                    <p><a href="https://nest-bs.jp/">https://nest-bs.jp/</a></h3>
+                </section>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.2631185210034!2d136.82440607527718!3d34.950013369795805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60048008762bbe0d%3A0x7c1c33a258f28ae5!2sNEST%20by%20THE%20SEA!5e0!3m2!1sja!2sjp!4v1695625794667!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <footer>
+        <img src="./src/images/footer.jpg" alt="footer Image" class="img-responsive">
+        <div id="logo"><!-- ロゴや社名 -->
+            <p>Congratulations on Wedding day</p>
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script src="src/scripts/main.js"></script>
+<script src="./src/scripts/loading.js"></script>
+
+
+</html>

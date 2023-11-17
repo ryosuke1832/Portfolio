@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>二次会情報</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Great+Vibes"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="src/styles/second_information.css" />
+    <link
+      rel="stylesheet"
+      href="https://d1nkt0x8bzz6gz.cloudfront.net/api/css?family=WhiteGardenRegular:Regular"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+    <meta http-equiv="content-type" charset="utf-8" />
+  </head>
+  <body>
+    <div class="loading-screen">
+      <div class="loading-progress" id="loading-progress"></div>
+      <div class="loading-percentage" id="loading-percentage">0%</div>
+    </div>
+
+    <header>
+      <div class="second-information-title">
+        <img
+          src="./src/images/hedder.png"
+          alt="header Image"
+          class="img-responsive"
+        />
+        <div class="blank-space"></div>
+        <div class="blank-space"></div>
+        <h1>二次会の御案内</h1>
+      </div>
+    </header>
+
+    <main>
+      <section id="time-block" class="information-block">
+        <h2>時間</h2>
+        <div class="blank-space"></div>
+        <p id="time-info">10/7（土） 　17:00 - 19:00</p>
+      </section>
+
+      <section id="location-block" class="information-block">
+        <h2>場所</h2>
+        <div class="blank-space"></div>
+        <p id="location-info">NEST by THE SEA</p>
+        <p id="location-info">披露宴と同会場になります</p>
+      </section>
+
+      <section id="fee-block" class="information-block">
+        <h2>会費</h2>
+        <div class="blank-space"></div>
+        <p id="fee-info">6,500 円</p>
+      </section>
+      <section id="team-block" class="information-block">
+        <h2>チーム分け情報</h2>
+        <div class="blank-space"></div>
+        <p>二次会で実施するゲームのチーム情報です</p>
+        <p id="team-info">
+          <span id="arrow-icon">↓</span> 詳細はこちら
+          <span id="arrow-icon">↓</span>
+        </p>
+
+        <div id="team-detail" class="team-detail">
+          <div class="team-name">チーム1</div>
+          <!-- チーム名 -->
+          <button class="sub-detail-button">
+            <a href="./team1.html" class="sub-detail-link">
+              <div class="sub-detail">
+                <span>Owen</span>
+                <span>濱口 沙耶香</span>
+                <span>加藤 さやか</span>
+                <span>山田 成美</span>
+              </div>
+            </a>
+          </button>
+
+          <div class="team-name">チーム2</div>
+          <!-- チーム名 -->
+          <button class="sub-detail-button">
+            <a href="./team2.html" class="sub-detail-link">
+              <div class="sub-detail">
+                <span>高橋 佑弥</span>
+                <span>三浦 泰至</span>
+                <span>櫻井 文</span>
+                <span>枡高 真美</span>
+              </div>
+            </a>
+          </button>
+          <!-- 同様にチーム3からチーム6までを修正 -->
+          <div class="team-name">チーム3</div>
+          <!-- チーム名 -->
+          <button class="sub-detail-button">
+            <a href="./team3.html" class="sub-detail-link">
+              <div class="sub-detail">
+                <span>斉藤 淳</span>
+                <span>野村 留唯</span>
+                <span>安井 久美</span>
+                <span>長谷部 光紀</span>
+                <span>吉田 真里奈</span>
+              </div>
+            </a>
+          </button>
+          <!-- チーム4 -->
+          <div class="team-name">チーム4</div>
+          <!-- チーム名 -->
+          <button class="sub-detail-button">
+            <a href="./team4.html" class="sub-detail-link">
+              <div class="sub-detail">
+                <span>上ノ坊 周</span>
+                <span>神村 直輝</span>
+                <span>山本 陵介</span>
+                <span>笠原 龍太郎</span>
+              </div>
+            </a>
+          </button>
+          <!-- チーム5 -->
+          <div class="team-name">チーム5</div>
+          <!-- チーム名 -->
+          <button class="sub-detail-button">
+            <a href="./team5.html" class="sub-detail-link">
+              <div class="sub-detail">
+                <span>山藤 僚馬</span>
+                <span>蝿原 翔太</span>
+                <span>久保田 健一</span>
+                <span>加藤 史晃</span>
+                <span>金子 貴裕</span>
+              </div>
+            </a>
+          </button>
+          <!-- チーム6 -->
+          <div class="team-name">チーム6</div>
+          <!-- チーム名 -->
+          <button class="sub-detail-button">
+            <a href="./team6.html" class="sub-detail-link">
+              <div class="sub-detail">
+                <span>川合 京美</span>
+                <span>新見 友里恵</span>
+                <span>横内 勇騎</span>
+                <span>岡田 将治</span>
+                <span>高橋 勇輝</span>
+              </div>
+            </a>
+          </button>
+        </div>
+      </section>
+
+      <!-- 戻るボタンの追加 -->
+      <div class="back-button-container">
+        <button onclick="window.history.back();" class="back-button">
+          Home
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <img
+        src="./src/images/footer.jpg"
+        alt="footer Image"
+        class="img-responsive"
+      />
+      <div id="logo">
+        <p>Congratulations on Wedding day</p>
+      </div>
+    </footer>
+
+    <script src="src/scripts/second_information.js" defer></script>
+    <script src="./src/scripts/loading.js"></script>
+  </body>
+</html>

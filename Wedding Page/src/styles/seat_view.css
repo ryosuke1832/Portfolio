@@ -1,0 +1,641 @@
+@import url('./loadjing.css');
+
+
+/* 基本的なスタイル */
+
+:root {
+    --main-bg-color: #333;
+    --main-font-size: 1.5rem;
+}
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.home-button {
+    position: absolute;
+    bottom: 1%; /* ボタンの位置を調整 */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 2px;
+    border-color: #000;
+}
+
+.home-button button {
+    padding: 10px 20px;
+    background-color: white; /* ボタンの背景色 */
+    color: black; /* テキストの色 */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.main-circles {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    width: 85%;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+}
+
+.main-circle-page1 {
+    margin-left: auto; /* Push the circle to the right side of the container */
+    margin-right: 10%; /* Use 20% of page width as right margin. Adjust this value as needed. */
+    visibility: hidden;
+}
+
+.main-circle-page3 {
+    margin-left: 10%; /* Push the circle to the right side of the container */
+    margin-right: auto; /* Use 20% of page width as right margin. Adjust this value as needed. */
+    visibility: hidden;
+}
+
+
+.circles {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    margin-bottom: auto;
+}
+
+.circle-column {
+    display: flex;
+    flex-direction: column;
+    height: 75vh; /* テーブルの高さと同じにします */
+    justify-content: space-between; /* これにより、均等なスペースが各サークルの間に生まれます */
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.main-sato-circle {
+    width: 20vw;
+    height: 20vw;
+    background-color: #333;
+    border-radius: 50%;
+    align-items: center;
+    margin-top: 1px;
+    margin-bottom: 4vh;
+    background: linear-gradient(45deg, rgba(255,255,255,0.5) 0%, blue 100%), #333; /* 45degの角度で薄い白から青へのグラデーション */
+    border-radius: 50%;
+    position: relative;
+    padding: 2px; /* これが実質的な「枠線」の幅になります */
+    box-sizing: border-box; /* paddingを含めた要素の全体のサイズを width および height に固定します */
+}
+.main-mari-circle {
+    width: 20vw;
+    height: 20vw;
+    background-color: #333;
+    border-radius: 50%;
+    align-items: center;
+    margin-top: 1px;
+    margin-bottom: 4vh;
+    background: linear-gradient(45deg, rgba(255,255,255,0.5) 0%, red 100%), #333; /* 45degの角度で薄い白から青へのグラデーション */
+    border-radius: 50%;
+    position: relative;
+    padding: 2px; /* これが実質的な「枠線」の幅になります */
+    box-sizing: border-box; /* paddingを含めた要素の全体のサイズを width および height に固定します */
+}
+
+/* 画像スタイルの統合 */
+.main-sato-circle img, .main-sato-circle-page1 img, .main-sato-circle-page3 img,.main-mari-circle img, .main-mari-circle-page1 img, .main-mari-circle-page3 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: center;
+
+}
+
+.main-sato-circle a, .main-sato-circle-page1 a, .main-sato-circle-page3 a,.main-mari-circle a, .main-mari-circle-page1 a, .main-mari-circle-page3 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.circle-sato {
+    width: 14vw;
+    height: 14vw;
+    background: linear-gradient(45deg, rgba(255,255,255,0.5) 0%, blue 100%), #333; /* 45degの角度で薄い白から青へのグラデーション */
+    border-radius: 50%;
+    position: relative;
+    padding: 2px;
+    box-sizing: border-box;
+    animation: rotateGradient 3s linear infinite; /* グラデーションを回転させるアニメーション */
+}
+.popup-left {
+    position: absolute;
+    width: 150px;
+    max-width: 80vw; /* 画面の80%を最大の幅として設定 */
+    bottom: 50%; /* サークルの中心にポップアップの下端を配置 */
+    right: 50%;  /* サークルの中心にポップアップの右端を配置 */
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 10px;
+    z-index: 9999;
+    display: none;
+    text-align: center;
+    font-weight: bold;
+}
+.circle-sato:hover .popup-left,.circle-mari:hover .popup-left {
+    display: block;
+}
+.popup-right {
+    position: absolute;
+    width: 150px;
+    max-width: 80vw; /* 画面の80%を最大の幅として設定 */
+    bottom: 50%; /* サークルの中心にポップアップの下端を配置 */
+    left: 50%;  /* サークルの中心にポップアップの右端を配置 */
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 10px;
+    z-index: 9999;
+    display: none;
+    text-align: center;
+    font-weight: bold;
+}
+.circle-sato:hover .popup-right,.circle-mari:hover .popup-right {
+    display: block;
+}
+
+
+.circle-mari {
+    width: 14vw;
+    height: 14vw;
+    background: linear-gradient(45deg, rgba(255,255,255,0.5) 0%, red 100%), #333; /* 45degの角度で薄い白から青へのグラデーション */
+    border-radius: 50%;
+    position: relative;
+    padding: 2px;
+    box-sizing: border-box;
+    animation: rotateGradient 3s linear infinite; /* グラデーションを回転させるアニメーション */
+}
+
+@keyframes rotateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+.circle {
+    width: 14vw;
+    height: 14vw;
+    background:
+        radial-gradient(circle at center, white, blue),
+        #333;
+    border-radius: 50%;
+    position: relative;
+    padding: 1px; /* これが実質的な「枠線」の幅になります */
+    box-sizing: border-box; /* paddingを含めた要素の全体のサイズを width および height に固定します */
+}
+
+.circle-hide {
+    width: 14vw;
+    height: 14vw;
+    background-color: #333;
+    border-radius: 50%;
+    visibility: hidden;
+    position: relative;
+
+}
+
+.circle-mari:hover .popup,.circle-sato:hover .popup {
+    display: block;
+}
+
+.circle-sato:last-child,
+.circle-hide:not(:first-child):first-of-type ~ .circle-sato:not(.circle-hide):last-of-type {
+    margin-bottom: 0;
+}
+.circle-mari:last-child,
+.circle-hide:not(:first-child):first-of-type ~ .circle-mari:not(.circle-hide):last-of-type {
+    margin-bottom: 0;
+}
+
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    width: 100%;
+}
+.table-container-page1 {
+    display: flex;
+    justify-content: right;
+    gap: 2vw;
+    width: 100%;
+    padding-right: 10vw;
+}
+.table-container-page3 {
+    display: flex;
+    justify-content: left;
+    gap: 2vw;
+    width: 100%;
+    padding-left: 10vw;
+}
+
+.table {
+    /* flex: 1; */
+    width: 15vw;  /* テーブルの幅を調整 */
+    height: 75vh;  /* テーブルの高さを調整 */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加してテーブルっぽさを出す */
+    border-radius: 5px; /* 角を少し丸くする */
+    border: 1px solid black;  /* 枠線を追加 */
+    display: flex;            /* Flexboxを有効にします。 */
+    justify-content: space-between; /* 子要素の間に等間隔のスペースを配置します。 */
+    flex-direction: column;
+    align-items: center;      /* 子要素を中央揃えにします。 */
+    padding-left: 2vh;          /* 左右のpaddingを適用して、サークルがテーブルの端に触れないようにします。 */
+    padding-right: 2vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    /* 他のスタイリングはそのままにします。 */
+}
+
+
+
+.table-circle {
+    width: 8vw;
+    height: 8vw;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.circle-mari img, .table-circle img,.circle-sato img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.circle-sato a, .circle-mari a, .table-circle a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.carousel {
+    width: 100%;
+}
+
+.carousel-cell {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* これを追加して、子要素が縦に並ぶようにします */
+    align-items: center;
+    justify-content: flex-start; /* 上部に円を配置 */
+    background-image: url('./background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.carousel-cell:nth-child(1) {
+    background-color: #f3f4f6;
+}
+
+.carousel-cell:nth-child(2) {
+    background-color: #e9ecef;
+}
+
+.carousel-cell:nth-child(3) {
+    background-color: #dee2e6;
+}
+
+.flickity-button {
+    top: 5vh;    /* topの値を初期値にリセット */
+    bottom: auto; /* 画面の下から10pxの位置にボタンを配置 */
+    height: 5vh;
+    width: 5vh;
+    margin: 0;
+    padding: 0;
+
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+    padding-top: 0;   /* アイコンの位置を調整 */
+    padding-bottom: 0; /* アイコンの位置を調整 */
+}
+
+
+.blackout-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 999;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.blackout-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+
+
+
+
+/* 読み込み画面のスタイル */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+}
+.loading-progress {
+    width: 0;
+    height: 4px;
+    background-color: #000;
+    transition: width 0.2s ease;
+}
+.loading-percentage {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+
+  @keyframes loading {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+
+
+/* ーーーーーーーーーーーーーー　クラッカー　ーーーーーーーーーーーーーーーーー*/
+
+
+.right-image-slide {
+    position: absolute; /* ここをfixedからabsoluteに変更 */
+    right: -50%; /* 初期状態で画面の右外に配置 */
+    bottom: 0;
+    width: 160px; /* 画面の右半分に収まるように50%に設定 */
+    height: 200px; /* 親要素の高さに合わせる */
+    transition: right 1s ease-in-out; /* スムーズなトランジション */
+    z-index: 10; /* 他の要素の上に表示 */
+}
+.right-image-slide img {
+    width: 160px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 0px;
+}
+
+.left-image-slide {
+    position: absolute;/* ここをfixedからabsoluteに変更 */
+    left: -50%; /* 初期状態で画面の右外に配置 */
+    bottom: 0;
+    width: 160px; /* 画面の右半分に収まるように50%に設定 */
+    height: 200px; /* 親要素の高さに合わせる */
+    transition: left 1s ease-in-out; /* スムーズなトランジション */
+    z-index: 10; /* 他の要素の上に表示 */
+}
+.left-image-slide img {
+    width: 160px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+/* ーーーーーーーーーーーーーー　紙吹雪　ーーーーーーーーーーーーーーーーー*/
+
+
+#confetti-containe-right {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999; /* 他の要素の上に表示 */
+}
+
+
+  .confetti-right {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: #FF0000;
+    pointer-events: none; /* クリックイベントをブロックしないようにする */
+    opacity: 0;
+    animation-iteration-count: 1; /* アニメーションを一度だけ実行 */
+    transform-origin: bottom center;
+  }
+
+  #confetti-containe-left {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999; /* 他の要素の上に表示 */
+}
+
+
+  .confetti-left {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: #FF0000;
+    pointer-events: none; /* クリックイベントをブロックしないようにする */
+    opacity: 0;
+    animation-iteration-count: 1; /* アニメーションを一度だけ実行 */
+    transform-origin: bottom center;
+  }
+
+  @keyframes shootFall {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(calc(500px * cos(var(--angle))), calc(500px * sin(var(--angle)))) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+
+
+
+  @media only screen and (min-width: 557px) {
+
+    .main-circles {
+        gap: 5vw;
+        width: 85%;
+        margin-top: 1vh;
+        margin-bottom: 0vh;
+    }
+    .main-circle-page1 {
+        margin-left: auto; /* Push the circle to the right side of the container */
+        margin-right: 10%; /* Use 20% of page width as right margin. Adjust this value as needed. */
+    }
+
+    .main-circle-page3 {
+        margin-left: 10%; /* Push the circle to the right side of the container */
+        margin-right: auto; /* Use 20% of page width as right margin. Adjust this value as needed. */
+    }
+    .circles {
+        gap: 0px;
+        margin-bottom: auto;
+    }
+
+    .circle-column {
+        height: 80vh; /* テーブルの高さと同じにします */
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .main-sato-circle {
+        width: 10vw;
+        height: 10vw;
+        max-height: 70px;
+        max-width: 70px;
+        margin-top: 1px;
+        margin-bottom: 10px;
+        padding: 2px; /* これが実質的な「枠線」の幅になります */
+    }
+    .main-mari-circle {
+        width: 10vw;
+        height: 10vw;
+        max-height: 70px;
+        max-width: 70px;
+        margin-top: 1px;
+        margin-bottom: 10px;
+        padding: 2px; /* これが実質的な「枠線」の幅になります */
+    }
+    .circle {
+        width: 8vh;
+        height: 8vh;
+        padding: 1px; /* これが実質的な「枠線」の幅になります */
+        box-sizing: border-box; /* paddingを含めた要素の全体のサイズを width および height に固定します */
+    }
+
+    .circle-hide {
+        width: 8vh;
+        height: 8vh;
+        max-width: 60px;
+        max-height: 60px;
+    }
+    .circle-sato {
+        width: 8vh;
+        height: 8vh;
+        max-width: 60px;
+        max-height: 60px;
+        padding: 2px;
+    }
+    .circle-mari {
+        width: 8vh;
+        height: 8vh;
+        max-width: 60px;
+        max-height: 60px;
+        padding: 2px;
+    }
+
+
+.table-container {
+    gap: 6px;
+    width: 100%;
+}
+.table-container-page1 {
+    gap: 6px;
+    width: 100%;
+    padding-right: 25vw;
+}
+.table-container-page3 {
+    gap: 6px;
+    width: 100%;
+    padding-left: 25vw;
+}
+
+.table {
+    /* flex: 1; */
+    width: 10vw;  /* テーブルの幅を調整 */
+    max-width: 100px;
+    height: 80vh;  /* テーブルの高さを調整 */
+    max-height: 700px;
+    padding-left: 10px;          /* 左右のpaddingを適用して、サークルがテーブルの端に触れないようにします。 */
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    /* 他のスタイリングはそのままにします。 */
+}
+
+
+
+.table-circle {
+    width: 8vw;
+    height: 8vw;
+    max-height: 45px;
+    max-width: 45px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+}

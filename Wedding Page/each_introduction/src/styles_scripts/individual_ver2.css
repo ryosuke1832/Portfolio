@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'Antro Vectra';
+  src: url('./font/Antro_Vectra.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Harenosora';
+  src: url('./font/Harenosora.otf') format('opentype');
+}
+
+body{
+  font-family: 'Harenosora';
+  margin: 0;
+  padding: 0;
+}
+
+.header-image,.footer-image {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+
+.main-title{
+  text-align: center;
+  font-weight:bold;
+  padding: 0 0;
+  margin-top: 0;
+  margin-bottom: 5%;
+  padding-top: 5%;
+  font-size: 2em;
+}
+
+.teams__inner {
+  display: flex;
+  flex-direction: column; /* 子要素を縦に並べる */
+  height: auto;
+}
+
+
+.member-item {
+  position: relative;
+  padding: 20px 0;
+  margin: 0;
+}
+.img-cover {
+  position: relative;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vw; /* Updated */
+  background-color: grey;
+  transition: left 0.7s cubic-bezier(0.37, 0.02, 0.55, 0.98);
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+}
+
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: -100%;
+  transition: left 0.7s cubic-bezier(0.37, 0.02, 0.55, 0.98) 0.5s; /* 1s delay */
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.member-item.visible .img-cover {
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.member-item.visible .img-responsive {
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  transform: translateX(100%);
+  z-index: 3;
+  width: 100%;
+  transition: transform 0.7s cubic-bezier(0.37, 0.02, 0.55, 0.98) 0.5s; /* Updated */
+  overflow: hidden;
+}
+
+
+.member-item.visible .text-overlay {
+  transform: translateX(0); /* Move to its original position when visible */
+}
+
+.member-name,
+.member-count {
+  margin: 0; /* Remove margin */
+  text-align: right; /* Align text to the right */
+  visibility: hidden;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.back-button-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f0f0f0; /* 薄い背景色 */
+  color: #666; /* 薄いテキスト色 */
+  border: 1px solid #ccc; /* 薄いボーダー色 */
+  border-radius: 5px; /* 角を丸く */
+  transition: background-color 0.3s, color 0.3s; /* クリック時のアニメーション */
+}
+
+.back-button:hover {
+  background-color: #e0e0e0; /* ホバー時の背景色 */
+  color: #444; /* ホバー時のテキスト色 */
+}
+
+
+.animated-overlay {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.5s, transform 1.5s;
+  will-change: opacity, transform;
+  height: auto;
+  bottom: 0;
+  width: 100%;
+  background: rgba(240, 230, 140, 0.05);
+  padding: 20px 20px 20px 20px;  /* 右側のpaddingを40pxに変更 */
+  margin: 0px;
+  overflow: hidden;
+  box-sizing: border-box;  /* この行を追加 */
+}
+
+
+
+
+/* このスタイルを追加 */
+.animated-overlay p {
+  opacity: 0;
+  transition: opacity 0.5s;
+}

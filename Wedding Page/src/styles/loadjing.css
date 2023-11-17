@@ -1,0 +1,41 @@
+/* Google Fontsのフォントをインポート */
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+
+
+/* 読み込み画面のスタイル */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+.loading-progress {
+    width: 0;
+    height: 4px;
+    background-color: #000;
+    transition: width 0.2s ease;
+}
+.loading-percentage {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-family: 'Klee One', sans-serif;
+}
+
+
+  @keyframes loading {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+

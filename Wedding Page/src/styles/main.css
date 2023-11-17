@@ -1,0 +1,397 @@
+@import url('./loadjing.css');
+
+
+@font-face {
+    font-family: 'Antro Vectra';
+    src: url('./font/Antro_Vectra.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'Harenosora';
+    src: url('./font/Harenosora.otf') format('opentype');
+  }
+
+.satomari-title{
+    font-family: "Antro Vectra";
+}
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    font-family: 'Klee One', cursive;
+
+}
+
+header {
+    width: 100vw; /* viewport width */
+    margin: 0 20px 20px 20px auto;
+}
+
+
+
+.name-title{
+    font-family: "Harenosora";
+
+}
+.access{
+    font-family: "Harenosora";
+
+}
+
+main, footer {
+    width: 80vw; /* viewport width */
+    margin: 20px auto;
+    overflow-x: hidden;
+
+
+}
+
+
+
+
+
+
+
+
+/* ストーリー */
+#story p {
+    font-size: 12px;
+    font-family: "Harenosora";
+
+}
+.blank-space {
+    height: 20px;  /* または必要なスペースに応じて */
+}
+
+
+/* フッター */
+footer {
+    width: 100vw; /* viewport width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    text-align: center;
+}
+
+
+/* イメージ */
+
+.top-image, .img-responsive {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.top-image img {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    border: 20px solid white;
+}
+
+.center-image {
+    width: 10%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-image_ads {
+    width: 50vw;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .top-image, .center-image img {
+        width: 100vw; /* viewport width */
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        padding: 0;
+    }
+    .img-responsive{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .top-image img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+}
+
+/*
+/* 通常サイズの時にはナビゲーションを表示する */
+#mobile-nav {
+    display: block;
+    /* font-family: 'Great Vibes', cursive; */
+}
+
+
+/* 通常サイズの時にはハンバーガーメニューを非表示にする */
+#hamburger-menu {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px; /* ここは適切なサイズに調整してください */
+}
+
+#hamburger-menu .bars span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin: 5px auto;
+    background-color: #333;
+}
+
+
+/* スマホサイズの時にはナビゲーションを非表示にし、ハンバーガーメニューを表示する */
+@media only screen and (max-width: 768px) {
+    #hamburger-icon {
+        display: block;
+    }
+    #mobile-nav {
+        display: none;
+    }
+    #hamburger-menu {
+        display: flex;
+    }
+}
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+
+/* Navigation */
+nav a {
+    margin-right: 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+.gold-color {
+    color: gold;
+}
+
+.hamburger-menu {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.hamburger-menu .bars span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin: 5px auto;
+    background-color: #333;
+}
+
+.hamburger-menu #menu-text {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -75.67%;
+    width: 66.67%;
+    height: 100%;
+    background: black;
+    padding: 0 15px;
+    overflow-y: auto;
+    transition: left 0.5s;
+    z-index: 2;
+}
+
+#sidebar.open {
+    left: 0;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* Navigation Links */
+nav a {
+    display: block;
+    line-height: 2.5;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+
+
+@media only screen and (min-width: 769px) {
+    #hamburger-menu, #sidebar {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: block;
+    }
+
+    nav a {
+        color: inherit;
+        margin-right: 20px;
+        display: inline-block; /* inline-block for horizontal alignment */
+        line-height: initial;
+        padding: initial;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #hamburger-menu, #sidebar {
+        display: block;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+    #mobile-nav-side a {
+        color: gray; /* カーソルを合わせた時の色をここで指定します。この例では淡いグレーにしています */
+    }
+
+    #mobile-nav-side a:hover {
+        color: white; /* カーソルを合わせた時の色をここで指定します。この例では淡いグレーにしています */
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 30px;
+        padding: 5px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        padding: 5px;
+        margin: 0;
+
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+    /* その他の要素に対するスタイルをここに追加 */
+}
+
+@keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .story-animation {
+    opacity: 0;
+    transform: translateY(100%);
+    animation-name: slideUp;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+  }
+
+
+
+
+/*  ---------------スライドイメージーーーーーーーーーーーーーーーーーーー*/
+
+    .glide {
+        width: 100%;
+        max-width: 600px; /* または任意の幅 */
+        margin: auto;
+    }
+    .glide__slide img {
+        width: 100%;
+        border-radius: 8px; /* 任意のスタイル */
+    }
+    .reveal-on-scroll {
+        opacity: 0;
+        transition: opacity 1s ease-in-out; /* 1sは透明から実体化するまでの時間、必要に応じて変更 */
+    }
+
+    .reveal-on-scroll.revealed {
+        opacity: 1;
+    }
+
+/*  ---------------Google MAPーーーーーーーーーーーーーーーーーーー*/
+
+    .map-container {
+        position: relative;
+        width: 90vw; /* 画面サイズの90% */
+        max-width: 600px; /* または適切な最大幅 */
+        padding-top: 75%; /* 幅の50%、アスペクト比を保つ */
+        margin: auto;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+
+
