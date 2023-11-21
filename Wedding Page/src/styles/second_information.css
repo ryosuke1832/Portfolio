@@ -1,12 +1,5 @@
 @import url('./loadjing.css');
-@font-face {
-    font-family: 'Antro Vectra';
-    src: url('./font/Antro_Vectra.otf') format('opentype');
-  }
-  @font-face {
-    font-family: 'Harenosora';
-    src: url('./font/Harenosora.otf') format('opentype');
-  }
+@import url('./font/font.css');
 
 
 
