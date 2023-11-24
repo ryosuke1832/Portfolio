@@ -1,474 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>席次表</title>
 
     <!-- Flickity CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./src/styles/seat_view.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
- <meta http-equiv="content-type" charset="utf-8">
-</head>
+    <link rel="stylesheet" href="./src/styles/seat_view.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <meta http-equiv="content-type" charset="utf-8" />
+  </head>
 
-<body>
+  <body>
     <!-- 読み込み画面 -->
     <div class="loading-screen">
-        <div class="loading-progress" id="loading-progress"></div>
-        <div class="loading-percentage" id="loading-percentage">0%</div>
+      <div class="loading-progress" id="loading-progress"></div>
+      <div class="loading-percentage" id="loading-percentage">0%</div>
     </div>
-
 
     <!------------------------            Page1            ----------------------------------------------------->
     <div class="carousel">
-
-
-        <div class="carousel-cell" id="confetti-container-left">
-            <div class="main-circles">
-                <div class="main-sato-circle main-circle-page1">
-                    <a href="#">
-                        <img src="#" alt="Description">
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="left-image-slide">
-                <img src="./src/images/cracker_man_Flip Image.png" alt="Description of Image">
-            </div>
-
-
-            <div class="table-container-page1">
-                <div class="circle-column">
-                    <div class="circle-sato">
-                        <a href="./each_introduction/taishi.html"  >
-                            <img src="./src/images/seat_view/taishi.jpg" alt="Description">
-                        </a>
-                    </div>
-
-                    <div class="circle-sato">
-                        <a href="./each_introduction/fumiaki.html"  >
-                            <img src="./src/images/seat_view/fumiaki.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="./each_introduction/kaneko.html"  >
-                            <img src="./src/images/seat_view/kaneko.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="#" >
-                            <img src="./src/images/sato_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">遠山　明子<br>新郎姉</div>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="#" >
-                            <img src="./src/images/sato_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">遠山　諒<br>新郎甥</div>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="#" >
-                            <img src="./src/images/sato_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">遠山　靖<br>新郎義兄</div>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="#" >
-                            <img src="./src/images/sato_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">満田　寿美子<br>新郎母</div>
-                    </div>
-                    <div class="circle-hide"></div>
-                </div>
-
-                <div class="table">
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                </div>
-
-                <div class="circle-column">
-                    <div class="circle-sato">
-                        <a href="./each_introduction/ryoma.html"  >
-                            <img src="./src/images/seat_view/ryoma.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="./each_introduction/kubota.html"  >
-                            <img src="./src/images/seat_view/kubota.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="./each_introduction/syota.html"  >
-                            <img src="./src/images/seat_view/shota.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="./each_introduction/yuya.html"  >
-                            <img src="./src/images/seat_view/yuya.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="#" >
-                            <img src="./src/images/sato_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">満田　春美<br>新郎伯母</div>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="#" >
-                            <img src="./src/images/sato_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">満田　三郎<br>新郎伯父</div>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="#" >
-                            <img src="./src/images/sato_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">満田　辰美<br>新郎父</div>
-                    </div>
-                    <div class="circle-hide"></div>
-                </div>
-
-            </div>
-
-
-
-
+      <div class="carousel-cell" id="confetti-container-left">
+        <div class="main-circles">
+          <div class="main-sato-circle main-circle-page1">
+            <a href="#">
+              <img src="#" alt="Description" />
+            </a>
+          </div>
         </div>
 
-    <!------------------------            Page2            ----------------------------------------------------->
-
-        <div class="carousel-cell">
-
-            <div class="main-circles">
-                <div class="main-sato-circle">
-                    <a href="#"  >
-                        <img src="./src/images/seat_view/satoshi.jpg" alt="Description">
-                    </a>
-                </div>
-                <div class="main-mari-circle">
-                    <a href="#"  >
-                        <img src="./src/images/seat_view/mari.jpg" alt="Description">
-                    </a>
-                </div>
-            </div>
-
-            <div class="table-container">
-                <div class="circle-column">
-                    <div class="circle-sato">
-                        <a href="./each_introduction/ide.html"  >
-                            <img src="./src/images/seat_view/ide.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="./each_introduction/ryutaro.html">
-                            <img src="./src/images/seat_view/ryutaro.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="./each_introduction/ryosuke.html"  >
-                            <img src="./src/images/seat_view/yamamoto_ryosuke.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="./each_introduction/nokura.html"  >
-                            <img src="./src/images/seat_view/nokura.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="#" >
-                            <img src="./src/images/sato_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-right">高野　治康<br>新郎伯父</div>
-                    </div>
-                    <div class="circle-sato">
-                        <a href="#" >
-                            <img src="./src/images/sato_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-right">高野　博子<br>新郎伯母</div>
-                    </div>
-                    <div class="circle-hide"></div>
-                    <div class="circle-hide"></div>
-
-                </div>
-
-                <div class="table">
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                </div>
-
-                <div class="circle-column">
-                        <div class="circle-sato">
-                            <a href="./each_introduction/ohara.html"  >
-                                <img src="./src/images/seat_view/ohara.jpg" alt="Description">
-                            </a>
-                        </div>
-                        <div class="circle-sato">
-                            <a href="./each_introduction/naoki.html"  >
-                                <img src="./src/images/seat_view/naoki.jpg" alt="Description">
-                            </a>
-                        </div>
-                        <div class="circle-sato">
-                            <a href="./each_introduction/amane.html"  >
-                                <img src="./src/images/seat_view/amane.jpg" alt="Description">
-                            </a>
-                        </div>
-                        <div class="circle-sato">
-                            <a href="./each_introduction/kaho.html"  >
-                                <img src="./src/images/seat_view/kaho.jpg" alt="Description">
-                            </a>
-                        </div>
-                        <div class="circle-sato">
-                            <a href="#" >
-                                <img src="./src/images/sato_shinzoku.png" alt="Description">
-                            </a>
-                            <div class="popup-right">下谷　敦也<br>新郎伯父</div>
-                        </div>
-                        <div class="circle-sato">
-                            <a href="#" >
-                                <img src="./src/images/sato_shinzoku.png" alt="Description">
-                            </a>
-                            <div class="popup-right">下谷　陽子<br>新郎伯母</div>
-                        </div>
-                        <div class="circle-hide"></div>
-                        <div class="circle-hide"></div>
-                </div>
-
-                <a href="./index.html" class="home-button"><button>Home</button></a>
-
-
-
-
-    <!------------------------            ページ2の真ん中            ----------------------------------------------------->
-
-
-                <div class="circle-column">
-                    <div class="circle-mari">
-                        <a href="./each_introduction/kato_sayaka.html"  >
-                            <img src="./src/images/seat_view/sayaka_k.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/kato_himari.html"  >
-                            <img src="./src/images/seat_view/himari.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/nomura_rui.html"  >
-                            <img src="./src/images/seat_view/nomura.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/saito_atsushi.html"  >
-                            <img src="./src/images/seat_view/saito.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="#" >
-                            <img src="./src/images/mari_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">深堀　充裕<br>新婦叔父</div>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="#" >
-                            <img src="./src/images/mari_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">深堀　裕子<br>新婦叔母</div>
-                    </div>
-                    <div class="circle-hide"></div>
-                    <div class="circle-hide"></div>
-                </div>
-
-                <div class="table">
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                </div>
-
-                <div class="circle-column">
-                    <div class="circle-mari">
-                        <a href="./each_introduction/hama.html"  >
-                            <img src="./src/images/seat_view/hama.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/yamada_narumi.html"  >
-                            <img src="./src/images/seat_view/yamada.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/masutaka_mami.html"  >
-                            <img src="./src/images/seat_view/mami.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/sakurai_fumi.html"  >
-                            <img src="./src/images/seat_view/sakurai.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="#" >
-                            <img src="./src/images/mari_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">深堀　嘉子<br>新婦祖母</div>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="#" >
-                            <img src="./src/images/mari_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-left">深堀　楯毅<br>新婦祖父</div>
-                    </div>
-                    <div class="circle-hide"></div>
-                    <div class="circle-hide"></div>
-
-                </div>
-            </div>
-
+        <div class="left-image-slide">
+          <img
+            src="./src/images/cracker_man_Flip Image.png"
+            alt="Description of Image"
+          />
         </div>
 
-
-    <!------------------------            Page3            ----------------------------------------------------->
-
-
-        <div class="carousel-cell" id="confetti-container-right">
-
-            <div class="main-circles">
-                <div class="main-sato-circle main-circle-page3">
-                    <a href="#"  >
-                        <img src="#" alt="Description">
-                    </a>
-                </div>
+        <div class="table-container-page1">
+          <div class="circle-column">
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00009.jpg"
+                  alt="Description"
+                />
+              </a>
             </div>
 
-
-            <div class="table-container-page3">
-
-
-
-                <div class="circle-column">
-                    <div class="circle-mari">
-                        <a href="./each_introduction/ishiyama_rei.html"  >
-                            <img src="./src/images/seat_view/ishiyama.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/tangiku_ayumi.html"  >
-                            <img src="./src/images/seat_view/tangiku.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/ohta_haruna.html"  >
-                            <img src="./src/images/seat_view/ohta.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/hasebe_mitu.html"  >
-                            <img src="./src/images/seat_view/hasebe.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/yoshida_marina.html"  >
-                            <img src="./src/images/seat_view/yoshida.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="#" >
-                            <img src="./src/images/mari_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-right">神谷　昇希<br>新婦弟</div>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="#" >
-                            <img src="./src/images/mari_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-right">平松　美奈子<br>新婦伯母</div>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="#" >
-                            <img src="./src/images/mari_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-right">平松　成敏<br>新婦伯父</div>
-                    </div>
-                </div>
-
-                <div class="table">
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                    <div class="table-circle"><a href="#"><img src="./src/images/flower.png" alt="Description"></a></div>
-                </div>
-
-                <div class="circle-column">
-                    <div class="circle-mari">
-                        <a href="./each_introduction/yamamoto_asumi.html"  >
-                            <img src="./src/images/seat_view/asumi.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/goto_chiho.html"  >
-                            <img src="./src/images/seat_view/goto.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/kawai_kyomi.html"  >
-                            <img src="./src/images/seat_view/kawai.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/nimi_yurie.html"  >
-                            <img src="./src/images/seat_view/nimi.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="./each_introduction/yasui_kumi.html"  >
-                            <img src="./src/images/seat_view/yasui.jpg" alt="Description">
-                        </a>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="#" >
-                            <img src="./src/images/mari_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-right">神谷　由起子<br>新婦母</div>
-                    </div>
-                    <div class="circle-mari">
-                        <a href="#" >
-                            <img src="./src/images/mari_shinzoku.png" alt="Description">
-                        </a>
-                        <div class="popup-right">神谷　修三<br>新郎父</div>
-                    </div>
-                    <div class="circle-hide"></div>
-                </div>
-
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00010.jpg"
+                  alt="Description"
+                />
+              </a>
             </div>
-
-            <div class="right-image-slide">
-                <img src="./src/images/crackers.png" alt="Description of Image">
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00011.jpg"
+                  alt="Description"
+                />
+              </a>
             </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">紐野 炯燐<br />新郎姉</div>
+            </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">川野 差義<br />新郎甥</div>
+            </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">川野 寅男<br />新郎義兄</div>
+            </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">安田 舞絵<br />新郎母</div>
+            </div>
+            <div class="circle-hide"></div>
+          </div>
 
+          <div class="table">
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+          </div>
 
+          <div class="circle-column">
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00012.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00013.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00014.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00015.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">催 米子<br />新郎伯母</div>
+            </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">諏訪内 早侑<br />新郎伯父</div>
+            </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">菅原 かんび<br />新郎父</div>
+            </div>
+            <div class="circle-hide"></div>
+          </div>
         </div>
+      </div>
+
+      <!------------------------            Page2            ----------------------------------------------------->
+
+      <div class="carousel-cell">
+        <div class="main-circles">
+          <div class="main-sato-circle">
+            <a href="#">
+              <img
+                src="./src/images/seat_view/man_main.jpg"
+                alt="Description"
+              />
+            </a>
+          </div>
+          <div class="main-mari-circle">
+            <a href="#">
+              <img
+                src="./src/images/seat_view/woman_main.jpg"
+                alt="Description"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <div class="circle-column">
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00001.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00002.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00003.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00004.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-right">向野 瑛大<br />新郎伯父</div>
+            </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-right">高野　博子<br />新郎伯母</div>
+            </div>
+            <div class="circle-hide"></div>
+            <div class="circle-hide"></div>
+          </div>
+
+          <div class="table">
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+          </div>
+
+          <div class="circle-column">
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00005.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00006.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00007.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/man00008.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-right">古川 文雄<br />新郎伯父</div>
+            </div>
+            <div class="circle-sato">
+              <a href="#">
+                <img src="./src/images/man_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-right">柳林 優花<br />新郎伯母</div>
+            </div>
+            <div class="circle-hide"></div>
+            <div class="circle-hide"></div>
+          </div>
+
+          <a href="./top_page.html" class="home-button"
+            ><button>Home</button></a
+          >
+
+          <!------------------------            ページ2の真ん中            ----------------------------------------------------->
+
+          <div class="circle-column">
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00001.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00002.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00003.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00004.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="#">
+                <img src="./src/images/woman_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">東麻生原 玲菜仁<br />新婦叔父</div>
+            </div>
+            <div class="circle-mari">
+              <a href="#">
+                <img src="./src/images/woman_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">能浦 璃湖<br />新婦叔母</div>
+            </div>
+            <div class="circle-hide"></div>
+            <div class="circle-hide"></div>
+          </div>
+
+          <div class="table">
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+          </div>
+
+          <div class="circle-column">
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00005.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00006.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00007.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00008.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="#">
+                <img src="./src/images/woman_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">細川 玲花<br />新婦祖母</div>
+            </div>
+            <div class="circle-mari">
+              <a href="#">
+                <img src="./src/images/woman_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-left">細川　法男<br />新婦祖父</div>
+            </div>
+            <div class="circle-hide"></div>
+            <div class="circle-hide"></div>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------            Page3            ----------------------------------------------------->
+
+      <div class="carousel-cell" id="confetti-container-right">
+        <div class="main-circles">
+          <div class="main-sato-circle main-circle-page3">
+            <a href="#">
+              <img src="#" alt="Description" />
+            </a>
+          </div>
+        </div>
+
+        <div class="table-container-page3">
+          <div class="circle-column">
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00009.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00010.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00011.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00012.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00013.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="#">
+                <img src="./src/images/woman_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-right">粳賀 和久<br />新婦弟</div>
+            </div>
+            <div class="circle-mari">
+              <a href="#">
+                <img src="./src/images/woman_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-right">日永田 綸<br />新婦伯母</div>
+            </div>
+            <div class="circle-mari">
+              <a href="#">
+                <img src="./src/images/woman_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-right">伏本 博文<br />新婦伯父</div>
+            </div>
+          </div>
+
+          <div class="table">
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+            <div class="table-circle">
+              <a href="#"
+                ><img src="./src/images/flower.png" alt="Description"
+              /></a>
+            </div>
+          </div>
+
+          <div class="circle-column">
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00014.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00015.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00016.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00017.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="./each_introduction/each_introduction.html">
+                <img
+                  src="./src/images/seat_view/woman00018.jpg"
+                  alt="Description"
+                />
+              </a>
+            </div>
+            <div class="circle-mari">
+              <a href="#">
+                <img src="./src/images/woman_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-right">俵石 おゆき<br />新婦母</div>
+            </div>
+            <div class="circle-mari">
+              <a href="#">
+                <img src="./src/images/woman_shinzoku.png" alt="Description" />
+              </a>
+              <div class="popup-right">稲鶴 満<br />新郎父</div>
+            </div>
+            <div class="circle-hide"></div>
+          </div>
+        </div>
+
+        <div class="right-image-slide">
+          <img src="./src/images/crackers.png" alt="Description of Image" />
+        </div>
+      </div>
     </div>
 
     <!-- Flickity carousel buttons -->
-
-
 
     <!-- Flickity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
     <!-- Custom JS -->
     <script src="./src/scripts/Flicky.js"></script>
     <script src="./src/scripts/loading.js"></script>
-</body>
+  </body>
 </html>
