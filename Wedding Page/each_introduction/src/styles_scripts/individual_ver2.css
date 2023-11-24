@@ -1,11 +1,5 @@
-@font-face {
-  font-family: 'Antro Vectra';
-  src: url('./font/Antro_Vectra.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Harenosora';
-  src: url('./font/Harenosora.otf') format('opentype');
-}
+@import url('./font/font.css');
+
 
 body{
   font-family: 'Harenosora';
@@ -46,6 +40,8 @@ body{
   padding: 20px 0;
   margin: 0;
 }
+
+
 .img-cover {
   position: relative;
   top: 0;
@@ -149,10 +145,51 @@ body{
 }
 
 
-
-
 /* このスタイルを追加 */
 .animated-overlay p {
   opacity: 0;
   transition: opacity 0.5s;
+  font-size: 1em;
 }
+
+
+/* iPhone 縦 */
+@media screen and (min-width:480px) {
+  /*　for iPhone Landscape　(iPhone 横)　*/
+  }
+  @media screen and (min-width:768px) and ( max-width:1024px) {
+  /*　for iPad 　*/
+  .main-title{
+    font-size: 3em;
+  }
+  .member-name,
+  .member-count {
+  font-size: 2em;
+}
+.back-button {
+  font-size: 25px;
+}
+  }
+  .animated-overlay p {
+    font-size: 1.5em;
+  }
+  @media screen and (min-width:1024px) {
+  /*　for PC　*/
+  .main-title{
+    font-size: 5em;
+  }
+  .member-name,
+  .member-count {
+  margin: 0; /* Remove margin */
+  text-align: right; /* Align text to the right */
+  visibility: hidden;
+  font-weight: bold;
+  font-size: 5em;
+}
+.back-button {
+  font-size: 45px;
+}
+.animated-overlay p {
+  font-size: 2em;
+}
+  }

@@ -1,35 +1,27 @@
 @import url('./loadjing.css');
 @import url('./font/font.css');
 
-
-
 .main-title{
     font-family: "Antro Vectra";
 }
-
 
 *, *:before, *:after {
     box-sizing: border-box;
 }
 
-
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 18px;
     text-align: center;
     margin: 0;
     font-family: 'Klee One', cursive;
 
 }
-
 header {
     width: 100vw; /* viewport width */
     margin: 0 20px 20px 20px auto;
 }
-
-
 
 .name-title{
     font-family: "Harenosora";
@@ -51,7 +43,6 @@ main, footer {
 
 /* ストーリー */
 #story p {
-    font-size: 12px;
     font-family: "Harenosora";
 
 }
@@ -256,7 +247,68 @@ nav a:hover {
 
 
 
-@media only screen and (min-width: 769px) {
+
+/*  ---------------Google MAPーーーーーーーーーーーーーーーーーーー*/
+
+.map-container {
+    position: relative;
+    width: 90vw; /* 画面サイズの90% */
+    max-width: 600px; /* または適切な最大幅 */
+    padding-top: 75%; /* 幅の50%、アスペクト比を保つ */
+    margin: auto;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* iPhone 縦 */
+@media screen and (min-width:480px) {
+    /*　for iPhone Landscape　(iPhone 横)　*/
+    body {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 16px;
+        padding: 5px;
+        margin: 0;
+    }
+    h2 {
+        font-size: 12px;
+        padding: 5px;
+        margin: 0;
+
+    }
+    h3 {
+        font-size: 8px;
+    }
+    #story p {
+        font-size: 8px;
+    }
+/* モバイルの時のみハンバーガーメニューを出す */
+    #hamburger-menu, #sidebar {
+        display: block;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+    #mobile-nav-side a {
+        color: gray;
+    }
+
+    #mobile-nav-side a:hover {
+        color: white;
+        font-weight: bold;
+    }
     #hamburger-menu, #sidebar {
         display: none;
     }
@@ -272,49 +324,65 @@ nav a:hover {
         line-height: initial;
         padding: initial;
     }
-}
-
-@media only screen and (max-width: 768px) {
-    #hamburger-menu, #sidebar {
-        display: block;
     }
-
-    #mobile-nav {
-        display: none;
-    }
-    #mobile-nav-side a {
-        color: gray; /* カーソルを合わせた時の色をここで指定します。この例では淡いグレーにしています */
-    }
-
-    #mobile-nav-side a:hover {
-        color: white; /* カーソルを合わせた時の色をここで指定します。この例では淡いグレーにしています */
-        font-weight: bold;
-    }
-}
-
-@media only screen and (max-width: 768px) {
+    @media screen and (min-width:768px) and ( max-width:1024px) {
+    /*　for iPad 　*/
     body {
         font-size: 14px;
     }
-
     h1 {
         font-size: 30px;
         padding: 5px;
         margin: 0;
     }
-
     h2 {
         font-size: 24px;
         padding: 5px;
         margin: 0;
 
     }
-
     h3 {
         font-size: 18px;
     }
-    /* その他の要素に対するスタイルをここに追加 */
-}
+    #story p {
+        font-size: 12px;
+    }
+    }
+    .animated-overlay p {
+      font-size: 1.5em;
+    }
+    @media screen and (min-width:1024px) {
+    /*　for PC　*/
+    body {
+        font-size: 28px;
+    }
+    .main-title{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    h1 {
+        font-size: 36px;
+        padding: 5px;
+        margin: 0;
+    }
+    h2 {
+        font-size: 30px;
+        padding: 5px;
+        margin: 0;
+
+    }
+    h3 {
+        font-size: 20px;
+    }
+    #story p {
+        font-size: 18px;
+    }
+    .map-container {
+        max-width: 1800px; /* または適切な最大幅 */
+    }
+    }
+
+
 
 @keyframes slideUp {
     0% {
@@ -358,27 +426,3 @@ nav a:hover {
     .reveal-on-scroll.revealed {
         opacity: 1;
     }
-
-/*  ---------------Google MAPーーーーーーーーーーーーーーーーーーー*/
-
-    .map-container {
-        position: relative;
-        width: 90vw; /* 画面サイズの90% */
-        max-width: 600px; /* または適切な最大幅 */
-        padding-top: 75%; /* 幅の50%、アスペクト比を保つ */
-        margin: auto;
-        margin-top: 20px;
-        overflow: hidden;
-    }
-
-    .map-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-
-
