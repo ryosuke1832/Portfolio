@@ -36,9 +36,9 @@ body{
 .teams__inner {
   display: flex;
   flex-direction: column; /* 子要素を縦に並べる */
+  align-items: center; /* 中央揃えにする */
   height: auto;
 }
-
 
 .member-item {
   position: relative;
@@ -129,4 +129,13 @@ body{
 .back-button:hover {
   background-color: #e0e0e0; /* ホバー時の背景色 */
   color: #444; /* ホバー時のテキスト色 */
+}
+
+
+@media only screen and (min-width: 557px) {
+
+.main-title{
+font-size: 32px;
+}
+
 }

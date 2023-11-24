@@ -84,7 +84,7 @@ body {
     margin-right: 2px;
 }
 
-.main-sato-circle {
+.main-man-circle {
     width: 20vw;
     height: 20vw;
     background-color: #333;
@@ -98,7 +98,7 @@ body {
     padding: 2px; /* これが実質的な「枠線」の幅になります */
     box-sizing: border-box; /* paddingを含めた要素の全体のサイズを width および height に固定します */
 }
-.main-mari-circle {
+.main-woman-circle {
     width: 20vw;
     height: 20vw;
     background-color: #333;
@@ -114,7 +114,7 @@ body {
 }
 
 /* 画像スタイルの統合 */
-.main-sato-circle img, .main-sato-circle-page1 img, .main-sato-circle-page3 img,.main-mari-circle img, .main-mari-circle-page1 img, .main-mari-circle-page3 img {
+.main-man-circle img, .main-man-circle-page1 img, .main-man-circle-page3 img,.main-woman-circle img, .main-woman-circle-page1 img, .main-woman-circle-page3 img {
     display: block;
     width: 100%;
     height: 100%;
@@ -124,7 +124,7 @@ body {
 
 }
 
-.main-sato-circle a, .main-sato-circle-page1 a, .main-sato-circle-page3 a,.main-mari-circle a, .main-mari-circle-page1 a, .main-mari-circle-page3 a {
+.main-man-circle a, .main-man-circle-page1 a, .main-man-circle-page3 a,.main-woman-circle a, .main-woman-circle-page1 a, .main-woman-circle-page3 a {
     display: block;
     width: 100%;
     height: 100%;
@@ -134,7 +134,7 @@ body {
 }
 
 
-.circle-sato {
+.circle-man {
     width: 14vw;
     height: 14vw;
     background: linear-gradient(45deg, rgba(255,255,255,0.5) 0%, blue 100%), #333; /* 45degの角度で薄い白から青へのグラデーション */
@@ -159,7 +159,7 @@ body {
     text-align: center;
     font-weight: bold;
 }
-.circle-sato:hover .popup-left,.circle-mari:hover .popup-left {
+.circle-man:hover .popup-left,.circle-woman:hover .popup-left {
     display: block;
 }
 .popup-right {
@@ -177,12 +177,12 @@ body {
     text-align: center;
     font-weight: bold;
 }
-.circle-sato:hover .popup-right,.circle-mari:hover .popup-right {
+.circle-man:hover .popup-right,.circle-woman:hover .popup-right {
     display: block;
 }
 
 
-.circle-mari {
+.circle-woman {
     width: 14vw;
     height: 14vw;
     background: linear-gradient(45deg, rgba(255,255,255,0.5) 0%, red 100%), #333; /* 45degの角度で薄い白から青へのグラデーション */
@@ -225,16 +225,16 @@ body {
 
 }
 
-.circle-mari:hover .popup,.circle-sato:hover .popup {
+.circle-woman:hover .popup,.circle-man:hover .popup {
     display: block;
 }
 
-.circle-sato:last-child,
-.circle-hide:not(:first-child):first-of-type ~ .circle-sato:not(.circle-hide):last-of-type {
+.circle-man:last-child,
+.circle-hide:not(:first-child):first-of-type ~ .circle-man:not(.circle-hide):last-of-type {
     margin-bottom: 0;
 }
-.circle-mari:last-child,
-.circle-hide:not(:first-child):first-of-type ~ .circle-mari:not(.circle-hide):last-of-type {
+.circle-woman:last-child,
+.circle-hide:not(:first-child):first-of-type ~ .circle-woman:not(.circle-hide):last-of-type {
     margin-bottom: 0;
 }
 
@@ -288,7 +288,7 @@ body {
     border-radius: 50%;
 }
 
-.circle-mari img, .table-circle img,.circle-sato img {
+.circle-woman img, .table-circle img,.circle-man img {
     display: block;
     width: 100%;
     height: 100%;
@@ -296,7 +296,7 @@ body {
     object-position: center;
 }
 
-.circle-sato a, .circle-mari a, .table-circle a {
+.circle-man a, .circle-woman a, .table-circle a {
     display: block;
     width: 100%;
     height: 100%;
@@ -553,7 +553,7 @@ body {
         margin-right: 2px;
     }
 
-    .main-sato-circle {
+    .main-man-circle {
         width: 10vw;
         height: 10vw;
         max-height: 70px;
@@ -562,7 +562,7 @@ body {
         margin-bottom: 10px;
         padding: 2px; /* これが実質的な「枠線」の幅になります */
     }
-    .main-mari-circle {
+    .main-woman-circle {
         width: 10vw;
         height: 10vw;
         max-height: 70px;
@@ -584,14 +584,14 @@ body {
         max-width: 60px;
         max-height: 60px;
     }
-    .circle-sato {
+    .circle-man {
         width: 8vh;
         height: 8vh;
         max-width: 60px;
         max-height: 60px;
         padding: 2px;
     }
-    .circle-mari {
+    .circle-woman {
         width: 8vh;
         height: 8vh;
         max-width: 60px;
@@ -638,5 +638,163 @@ body {
     background-color: transparent;
     border-radius: 50%;
 }
+
+}
+
+
+@media only screen and (min-width: 900px) {
+
+    .main-circles {
+        gap: 15vw;
+        width: 85%;
+        margin-top: 1vh;
+        margin-bottom: 0vh;
+    }
+    .main-circle-page1 {
+        margin-left: auto; /* Push the circle to the right side of the container */
+        margin-right: 20%; /* Use 20% of page width as right margin. Adjust this value as needed. */
+    }
+
+    .main-circle-page3 {
+        margin-left: 20%; /* Push the circle to the right side of the container */
+        margin-right: auto; /* Use 20% of page width as right margin. Adjust this value as needed. */
+    }
+    .circles {
+        gap: 10px;
+        margin-bottom: auto;
+    }
+
+    .circle-column {
+        height: 80vh; /* テーブルの高さと同じにします */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .main-man-circle,.main-woman-circle {
+        width: 15vw;
+        height: 15vw;
+        max-height: 100px;
+        max-width: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 2px; /* これが実質的な「枠線」の幅になります */
+    }
+    .circle {
+        width: 10vh;
+        height: 10vh;
+        padding: 1px; /* これが実質的な「枠線」の幅になります */
+        box-sizing: border-box; /* paddingを含めた要素の全体のサイズを width および height に固定します */
+    }
+
+    .circle-hide {
+        width: 10vh;
+        height: 10vh;
+        max-width: 90px;
+        max-height: 90px;
+    }
+    .circle-man {
+        width: 10vh;
+        height: 10vh;
+        max-width: 90px;
+        max-height: 90px;
+        padding: 2px;
+    }
+    .circle-woman {
+        width: 10vh;
+        height: 10vh;
+        max-width: 90px;
+        max-height: 90px;
+        padding: 2px;
+    }
+
+
+.table-container {
+    gap: 20px;
+    width: 100%;
+}
+.table-container-page1 {
+    gap: 6px;
+    width: 100%;
+    padding-right: 20vw;
+}
+.table-container-page3 {
+    gap: 6px;
+    width: 100%;
+    padding-left: 20vw;
+}
+
+.table {
+    /* flex: 1; */
+    width: 10vw;  /* テーブルの幅を調整 */
+    max-width: 100px;
+    height: 80vh;  /* テーブルの高さを調整 */
+    max-height: 700px;
+    padding-left: 10px;          /* 左右のpaddingを適用して、サークルがテーブルの端に触れないようにします。 */
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* 他のスタイリングはそのままにします。 */
+}
+
+
+
+.table-circle {
+    width: 8vw;
+    height: 8vw;
+    max-height: 45px;
+    max-width: 45px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+
+
+.right-image-slide {
+    position: absolute; /* ここをfixedからabsoluteに変更 */
+    right: -50%; /* 初期状態で画面の右外に配置 */
+    bottom: 0;
+    width: 240px; /* 画面の右半分に収まるように50%に設定 */
+    height: 300px; /* 親要素の高さに合わせる */
+    transition: right 1s ease-in-out; /* スムーズなトランジション */
+    z-index: 10; /* 他の要素の上に表示 */
+}
+.right-image-slide img {
+    width: 240px; /* 画面の右半分に収まるように50%に設定 */
+    height: 300px; /* 親要素の高さに合わせる */
+    object-fit: cover;
+    margin-top: 0px;
+}
+
+.left-image-slide {
+    position: absolute;/* ここをfixedからabsoluteに変更 */
+    left: -50%; /* 初期状態で画面の右外に配置 */
+    bottom: 0;
+    width: 240px; /* 画面の右半分に収まるように50%に設定 */
+    height: 300px; /* 親要素の高さに合わせる */
+    transition: left 1s ease-in-out; /* スムーズなトランジション */
+    z-index: 10; /* 他の要素の上に表示 */
+}
+.left-image-slide img {
+    width: 240px; /* 画面の右半分に収まるように50%に設定 */
+    height: 300px; /* 親要素の高さに合わせる */
+    object-fit: cover;
+    margin-top: 0px;
+}
+
+
+.home-button button {
+    font-size: 32px;
+}
+
+.flickity-button {
+    top: 10vh;    /* topの値を初期値にリセット */
+    bottom: auto; /* 画面の下から10pxの位置にボタンを配置 */
+    height: 10vh;
+    width: 10vh;
+    margin: 0;
+    padding: 0;
+
+}
+
 
 }
