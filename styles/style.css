@@ -522,9 +522,10 @@
 .bg-img-zoom {
   background-image: url(images/image-1.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
-  width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .img-bg50 {
@@ -533,7 +534,7 @@
 .img-bg50::before {
   display: block;
   content: "";
-  padding-top: 50%;
+  padding-top: 100%;
 }
 
 .mobile-menu {
@@ -655,6 +656,12 @@ img {
 
 .mb-sm, .travel__img, .houses__title, .popular__title, .sub-title {
   margin-bottom: 16px !important;
+
+}
+a.your-link-class {
+  color: inherit; /* リンクの色を親要素の色と同じにする */
+  text-decoration: none; /* 下線を消す */
+  /* 必要に応じて他のスタイルを追加 */
 }
 
 .mb-lg, .travel, .houses, .popular__btn {
@@ -724,7 +731,9 @@ img {
 }
 
 .font-lr, .houses__title {
-  font-size: 17px;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #535353;
 }
 @media screen and (min-width: 960px) {
   .font-lr, .houses__title {
@@ -847,7 +856,7 @@ main {
   }
 }
 .travel__img {
-  height: 300px;
+  height: 500px;
   transition: box-shadow 0.5s ease 1.6s;
 }
 .travel__img.inview {
