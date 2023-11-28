@@ -1038,7 +1038,9 @@ main {
   display: flex;
 }
 .logo__img {
-  width: 0.7em;
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 10px;
 }
 .logo__world {
   color: #904669;
